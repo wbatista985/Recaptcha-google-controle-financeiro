@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "5eb71715-1c14-46e5-b4f4-910cebe13b5e",
+		"name": "Despesas Pessoais",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19877844"
+	},
+	"item": [
+		{
+			"name": "Salvar Movimentação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"categoria\": {\r\n      \"id\": 3\r\n    },\r\n    \"comentario\": \"guardar \",\r\n    \"conta\": {\r\n      \"id\": 1\r\n    },\r\n    \"data\": \"10/11/2023\",\r\n    \"tipoMovimentacao\": \"RECEITA\",\r\n    \"valor\": 200\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/movimentacao/salvar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movimentacao",
+						"salvar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Movimentações",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movimentacao/listar-movimentacoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movimentacao",
+						"listar-movimentacoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar Conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"banco\": \"Nubank\",\r\n  \"saldo\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/conta/salvar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"salvar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Contas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/conta/listar-contas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"listar-contas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar Categoria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descricao\": \"Carro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categoria/salvar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria",
+						"salvar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/categoria/listar-categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria",
+						"listar-categorias"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
